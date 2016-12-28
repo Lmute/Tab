@@ -6,7 +6,7 @@ serpent = require('serpent')
 redis:select(2)
 gp = -1001086542546
 sudo_users = {
-[279198459,180122599] = 'mahdi','hojjat'
+[279198459] = 'mahdi',' '
 }--@Showeye
 function dl_cb(arg, data)
   vardump(arg)
