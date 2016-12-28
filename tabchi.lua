@@ -6,7 +6,7 @@ serpent = require('serpent')
 redis:select(2)
 gp = -1001086542546
 sudo_users = {
-[279198459] = 'mahdi',
+[279198459,180122599] = 'mahdi','hojjat'
 }--@Showeye
 function dl_cb(arg, data)
   vardump(arg)
@@ -36,14 +36,14 @@ end
 --@Showeye
 function add_member(msg)
 local users = redis:smembers('bot:addlist')
-local user = 279198459
+local user = 999999999
 for k,v in pairs(users) do
 user = user..','..v
 tdcli.addChatMember(msg.chat_id_, v, 20)
 end
 end
 function to_msg(msg)
-if msg.content_.text_ == "/add" then
+if msg.content_.text_ == "/m" then
 tdcli.searchContacts('', 500)
 add_member(msg)
 end
